@@ -1,0 +1,22 @@
+/*global css*/
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Hanken Grotesk';
+    overflow: hidden;
+    margin: 0;
+}
+
+.results-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.results-overview{
+    background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
+
+/*design for desktop*/
+@media only screen and (min-width:768px){
+
+}

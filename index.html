@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./results-summary-component-main/assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Results summary component</title>
@@ -30,23 +32,40 @@
       </div>
       <div class="results-summary">
         <h2 class="summary-title">Summary</h2>
-        <div class="reaction-sum">
-          <h3 class="reaction-title">Reaction</h3>
+
+        <div class="summary-tab" id="reaction-tab">
+          <div class="summary-tab-left">
+            <img id='reaction-icon' alt="reaction icon" src="./results-summary-component-main/assets/images/icon-reaction.svg">
+            <h3 class="reaction-title">Reaction</h3>
+          </div>
           <h3 class="reaction-score">80 / 100</h3>
         </div>
-        <div class="memory-sum">
-          <h3 class="memory-title">Memory</h3>
+
+        <div class="summary-tab" id="memory-tab">
+          <div class="summary-tab-left">
+            <img id="memory-icon" alt="memory icon" src="./results-summary-component-main/assets/images/icon-memory.svg">
+            <h3 class="memory-title">Memory</h3>
+          </div>
           <h3 class="memory-score">92 / 100</h3>
         </div>
-        <div class="verbal-sum">
-          <h3 class="verbal-title">Verbal</h3>
+
+        <div class="summary-tab" id="verbal-tab">
+          <div class="summary-tab-left">
+            <img id="verbal-icon" alt="verbal icon" src="./results-summary-component-main/assets/images/icon-verbal.svg">
+            <h3 class="verbal-title">Verbal</h3>
+          </div>
           <h3 class="verbal-score">61 / 100</h3>
         </div>
-        <div class="visual-sum">
-          <h3 class="visual-title">Visual</h3>
+
+        <div class="summary-tab" id="visual-tab">
+          <div class="summary-tab-left">
+            <img id="visual-icon" alt="visual icon" src="./results-summary-component-main/assets/images/icon-visual.svg">
+            <h3 class="visual-title">Visual</h3>
+          </div>
           <h3 class="visual-score">72 / 100</h3>
         </div>
       </div>
+
       <button class="continue-button">Continue</button>
     </div>
   </main>
