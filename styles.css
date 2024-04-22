@@ -1,4 +1,22 @@
 /*global css*/
+:root{
+    /*primary*/
+    --light-red:hsl(0, 100%, 67%);
+    --orangey-yellow:hsl(39, 100%, 56%);
+    --green-teal:hsl(166, 100%, 37%);
+    --cobalt-blue:hsl(234, 85%, 45%);
+    /*gradients (background)*/
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue:hsl(241, 81%, 54%);
+    /*gradients (circle)*/
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+    /*neutral*/
+    --pale-blue:hsl(221, 100%, 96%);
+    --light-lavender:hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
 body{
     height: 100vh;
     width: 100vw;
@@ -7,14 +25,99 @@ body{
     margin: 0;
 }
 
-.results-card{
+main{
+    height: 95vh;
     display: flex;
     flex-direction: column;
 }
 
-.results-overview{
-    background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+.results-card{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
 }
+
+.results-overview{
+    background-image: linear-gradient(var(--light-slate-blue),var(--light-royal-blue));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 50%;
+    padding-inline: 15%;
+    padding-top: 5%;
+    padding-bottom: 7%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.results-title,
+.results-score-100,
+.results-text-subtext{
+    color: var(--light-lavender);
+}
+
+.results-title{
+    font-size: 1rem;
+    margin: 0;
+}
+
+.score-bubble{
+    background-image: linear-gradient(var(--violet-blue),var(--persian-blue));
+    border-radius: 50%;
+    aspect-ratio: 1;
+    min-width: 45%;
+    min-height: 45%;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.results-score,
+.results-text-title,
+.continue-button{
+    color: white;
+}
+
+.results-score{
+    font-size: 3rem;
+    margin: 0;
+}
+
+.results-score-100{
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.results-text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.results-text-title{
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.results-text-subtext{
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.summary-tab{
+    display:flex;
+}
+.summary-tab-left{
+    display: flex;
+}
+
 
 /*design for desktop*/
 @media only screen and (min-width:768px){
