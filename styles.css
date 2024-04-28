@@ -1,10 +1,10 @@
 /*global css*/
 :root{
     /*primary*/
-    --light-red:hsl(0, 100%, 67%);
-    --orangey-yellow:hsl(39, 100%, 56%);
-    --green-teal:hsl(166, 100%, 37%);
-    --cobalt-blue:hsl(234, 85%, 45%);
+    --light-red:hsla(0, 100%, 67%,0.1);
+    --orangey-yellow:hsl(39, 100%, 56%, 0.1);
+    --green-teal:hsl(166, 100%, 37%, 0.1);
+    --cobalt-blue:hsl(234, 85%, 45%, 0.1);
     /*gradients (background)*/
     --light-slate-blue: hsl(252, 100%, 67%);
     --light-royal-blue:hsl(241, 81%, 54%);
@@ -33,8 +33,8 @@ main{
 
 .results-card{
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 45% 45% 10%;
     background-color: white;
 }
 
@@ -44,7 +44,6 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 50%;
     padding-inline: 15%;
     padding-top: 5%;
     padding-bottom: 7%;
@@ -103,21 +102,103 @@ main{
 
 .results-text-title{
     margin: 0;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    font-weight: 700;
 }
 
 .results-text-subtext{
     margin: 0;
     font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.results-summary{
+    padding-inline: 7%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.summary-title{
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.all-summary-tabs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .summary-tab{
     display:flex;
-}
-.summary-tab-left{
-    display: flex;
+    padding-inline: 10px;
+    justify-content: space-between;
+    border-radius: 10px;
+    height: 45px;
+    align-items: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
 }
 
+.summary-tab-left{
+    display: flex;
+    gap: 15px;
+}
+
+.summary-tab-title{
+    font-size: 1.1rem;
+}
+
+.score-div{
+    display: flex;
+    gap: 10px;
+    font-size: 1rem;
+    align-items: center;
+}
+
+.of-100{
+    opacity: 0.4;
+    font-size: 1rem;
+}
+
+#reaction-tab{
+    background-color: var(--light-red);
+}
+
+#reaction-title{
+    color: hsl(0, 100%, 67%);
+}
+#memory-tab{
+    background-color: var(--orangey-yellow);
+}
+
+#memory-title{
+    color: hsl(39, 100%, 56%);
+}
+
+#verbal-tab{
+    background-color: var(--green-teal);
+}
+
+#verbal-title{
+    color:hsl(166, 100%, 37%);
+}
+
+#visual-tab{
+    background-color: var(--cobalt-blue);
+}
+
+#visual-title{
+    color: hsl(234, 85%, 45%);
+}
+
+.continue-button{
+    background-color: hsl(224, 30%, 27%);
+}
 
 /*design for desktop*/
 @media only screen and (min-width:768px){
