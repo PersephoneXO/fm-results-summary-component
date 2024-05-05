@@ -58,7 +58,7 @@ main{
 }
 
 .results-title{
-    font-size: 1rem;
+    font-size: 1em;
     margin: 0;
 }
 
@@ -224,6 +224,36 @@ main{
 
 
 /*design for desktop*/
-@media only screen and (min-width:768px){
+@media only screen and (min-width:1024px){
+    body{
+        background-color: #ffffff;
+    }
+
+    main{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .results-card{
+        height: 50%;
+        width: 50%;
+        grid-template-rows: 90%10%;
+        grid-template-columns: 50%;
+        grid-template-areas: "results-overview results-summary"
+        "results-overview button-container";
+        box-shadow: hsl(221, 100%, 96%) 0px 4px 16px, hsl(221, 100%, 96%) 0px 8px 32px;
+    }
+
+    .results-overview{
+        grid-area: results-overview;
+    }
+
+    .results-summary{
+        grid-area: results-summary;
+    }
+
+    .button-container{
+        grid-area: button-container;
+    }
 
 }
