@@ -17,7 +17,105 @@
     --dark-gray-blue: hsl(224, 30%, 27%);
 }
 
+html{
+    font-size: calc(15px + 0.390625vw);
+}
+
 body{
     height: 100vh;
     width: 100vw;
+    font-family: 'Hanken Grotesk';
+    overflow: hidden;
+    margin: 0;
+}
+
+main{
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.results-card{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 45% 50%;
+    background-color: white;
+}
+
+.results-overview{
+    background-image: linear-gradient(var(--light-slate-blue),var(--light-royal-blue));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 15%;
+    padding-top: 5%;
+    padding-bottom: 7%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.results-title,
+.results-score-100,
+.results-text-subtext{
+    color: var(--light-lavender);
+}
+
+.results-title{
+    font-size: 1rem;
+    margin: 0;
+}
+
+.score-bubble{
+    background-image: linear-gradient(var(--violet-blue),var(--persian-blue));
+    border-radius: 50%;
+    aspect-ratio: 1;
+    min-width: 45%;
+    min-height: 45%;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.results-score,
+.results-text-title,
+.continue-button{
+    color: white;
+}
+
+.results-score{
+    font-size: 3rem;
+    margin: 0;
+}
+
+.results-score-100{
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.results-text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:calc(8px + 1.5625vw);
+}
+
+.results-text-title{
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.results-text-subtext{
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/*design for desktop*/
+@media only screen and (min-width:1024px) and (orientation: landscape){
+
 }
