@@ -38,7 +38,7 @@ main{
 .results-card{
     height: 100%;
     display: grid;
-    grid-template-rows: 45% 50%;
+    grid-template-rows: 45% 55%;
     background-color: white;
 }
 
@@ -47,9 +47,10 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-inline: 15%;
-    padding-top: 5%;
-    padding-bottom: 7%;
+    justify-content: space-evenly;
+    padding-inline: calc(50px + 1.5625vw);
+    padding-top: calc(15px + 1.5625vw);
+    padding-bottom: calc(15px + 1.5625vw);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
@@ -100,7 +101,7 @@ main{
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap:calc(8px + 1.5625vw);
+    gap:calc(5px + 1.5625vw);
 }
 
 .results-text-title{
@@ -114,6 +115,113 @@ main{
     font-size: 0.9rem;
     font-weight: 500;
 }
+
+.second-half-container{
+    display:grid;
+    grid-template-rows: 85% 15%;
+}
+
+.results-summary{
+    margin: calc(20px + 1.5625vw);
+    display: grid;
+    grid-template-rows: 10% 90%;
+    gap: calc(10px + 1.5625vw);
+}
+
+.summary-title{
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.all-summary-tabs{
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20%;
+    gap: calc(8px + 1.5625vw);
+}
+
+.summary-tab{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding-inline: calc(8px + 1.5625vw);
+}
+
+.summary-tab-left{
+    display: flex;
+    align-items: center;
+    gap: calc(5px + 1.5625vw);
+}
+
+.summary-tab-title{
+    font-size: 1.1rem;
+}
+
+.score-div{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    gap: calc(2px + 1.5625vw);
+}
+
+.of-100{
+    opacity: 0.4;
+    font-size: 1rem;
+}
+
+.summary-score{
+    font-size: 1rem;
+}
+
+#reaction-tab{
+    background-color: var(--light-red);
+}
+
+#reaction-title{
+    color: hsl(0, 100%, 67%);
+}
+#memory-tab{
+    background-color: var(--orangey-yellow);
+}
+
+#memory-title{
+    color: hsl(39, 100%, 56%);
+}
+
+#verbal-tab{
+    background-color: var(--green-teal);
+}
+
+#verbal-title{
+    color:hsl(166, 100%, 37%);
+}
+
+#visual-tab{
+    background-color: var(--cobalt-blue);
+}
+
+#visual-title{
+    color: hsl(234, 85%, 45%);
+}
+
+.button-container{
+    padding-inline: calc(20px + 1.5625vw);
+}
+
+.continue-button{
+    background-color: var(--dark-gray-blue);
+    width: 100%;
+    border-radius: 50px;
+    height: 90%;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.attribution{
+    font-size: 1rem;
+}
+
+
 
 /*design for desktop*/
 @media only screen and (min-width:1024px) and (orientation: landscape){
