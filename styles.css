@@ -221,9 +221,119 @@ main{
     font-size: 1rem;
 }
 
-
+/*circle size modification for tablets*/
+@media only screen and (min-width:768px){
+    .score-bubble{
+        min-width: 30%;
+        min-height: 30%;
+    }
+}
 
 /*design for desktop*/
 @media only screen and (min-width:1024px) and (orientation: landscape){
+
+    main{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .results-card{
+        height: 50%;
+        width: 50%;
+        grid-template-areas: "results-ov second-hc";
+        grid-template-rows: 100%;
+        grid-template-columns: 50% 50%;
+        box-shadow: var(--pale-blue) 0px 15px 25px 10px;
+        border-radius: 25px;
+    }
+
+    .results-overview{
+        grid-area: results-ov;
+        border-radius: 25px;
+        padding-inline: calc(45px + 1.5625vw);
+        padding-top: calc(5px + 1.5625vw);
+        padding-bottom: calc(5px + 1.5625vw);
+        justify-content: space-between;
+    }
+
+    .results-title{
+        font-size: .9rem;
+    }
+
+    .score-bubble{
+        min-width: 45%;
+        min-height: 45%;
+    }
+
+    .results-score{
+        font-size: 2.5rem;
+    }
+
+    .results-score-100{
+        font-size: 0.7rem;
+    }
+
+    .results-text{
+        gap: calc(-5px + 1.5625vw);
+    }
+
+    .results-text-title{
+        font-size: 1.2rem;
+    }
+
+    .results-text-subtext{
+        font-size: 0.75rem;
+    }
+
+    .second-half-container{
+        grid-area: second-hc;
+        grid-template-rows: 75% 25%;
+    }
+
+    .results-summary{
+        margin: calc(10px + 1.5625vw);
+        gap: calc(-5px + 1.5625vw);
+    }
+
+    .all-summary-tabs{
+        gap: calc(-5px + 1.5625vw);
+    }
+
+    .summary-tab{
+        padding-inline: calc(-10px + 1.5625vw);
+    }
+
+    .summary-tab-left{
+        gap: calc(-10px + 1.5625vw);
+    }
+
+    .summary-title{
+        font-size: .9rem;
+    }
+
+    .summary-tab-title{
+        font-size: 0.8rem;
+    }
+
+    .score-div{
+        gap: calc(-15px + 1.5625vw);
+    }
+
+    .of-100, .summary-score{
+        font-size: 0.8rem;
+    }
+
+    .button-container{
+        padding-inline: calc(10px + 1.5625vw);
+        display: flex;
+        align-items: center;
+        margin-bottom: calc(-10px + 1.5625vw);
+    }
+
+    .continue-button{
+        height: 50%;
+        font-size: 0.7rem;
+    }
+
 
 }
